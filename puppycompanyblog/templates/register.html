@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<style>
+    body {
+      background-image: url('https://media4.giphy.com/media/26u4oh3BsaUOqHpYc/giphy.gif');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+    </style>
+</head>
+<html>
+    <br>
+    <br>
+    <body style="color:white">
+<form method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+ <div class="form-group">
+     <b>  {{ form.email.label }}</b> {{ form.email(class_="form-control") }}
+    </div>
+    <div class="form-group">
+    <b>{{ form.username.label }}</b> {{ form.username(class_="form-control") }}
+    </div>
+    <div class="form-group">
+        <b>{{ form.password.label }} </b>{{ form.password(class_="form-control") }}
+    </div>
+    <div class="form-group">
+    <b>{{ form.pass_confirm.label }} </b>{{ form.pass_confirm(class_="form-control") }}
+    </div>
+        {{ form.submit(class="btn btn-success") }}
+</form>
+</html>
+{% endblock %}
+</body>
