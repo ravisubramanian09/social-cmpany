@@ -1,4 +1,4 @@
-# social-cmpany
+# social-company
 
 This is the blog where we will provide opportunity for the people who are willing to publish blog. 
 
